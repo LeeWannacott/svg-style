@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        img[src="macos.svg"] {
+  } 
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img class="svg-img" src="macos.svg"<img>
+    <p id="demo">jladsjfkl</p>
+    <script>
+        var images = document.getElementsByClassName("svg-img")
+        for(let image of images){
+            console.log(image)
+            image.style.backgroundColor = "green";
+        }
+
+    var text, parser, xmlDoc;
+
+        text = "<bookstore><book>" +
+    "<title>Everyday Italian</title>" +
+    "<author>Giada De Laurentiis</author>" +
+    "<year>2005</year>" +
+    "</book></bookstore>";
+
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(text,"text/xml");
+
+    document.getElementById("demo").innerHTML =
+    xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+
+    </script>
+</body>
+</html>
