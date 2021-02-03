@@ -10,28 +10,50 @@
     <title>Document</title>
 </head>
 <body>
-    <img class="svg-img" src="macos.svg"<img>
-    <p id="demo">jladsjfkl</p>
+    <img class="svg-img" src="macos.svg"><img>
+    <p id="demo"></p>
     <script>
-        var images = document.getElementsByClassName("svg-img")
-        for(let image of images){
-            console.log(image)
-            image.style.backgroundColor = "green";
+
+    var path = document.location.pathname
+    var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'))
+    directory = directory + "/macos.svg"
+    console.log(directory)
+
+ (async () => {
+    let request = await fetch(directory);
+    let text = await request.text();
+    console.log(text);
+  })();
+ /*   var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        // Typical action to be performed when the document is ready:
+        console.log("hello")
+        document.getElementById("demo").innerHTML = xhttp.responseText;
+        console.log(xhttp.responseText);
         }
+    };
+    var macos = "macos.svg"
+    xhttp.open("GET", macos, true);
+    xhttp.send();
+    fetch('/home/lee/Desktop/svg-manipulation/macos.svg')
+  .then(response => console.log(response))
+  .then(data => console.log(data)); */
 
-    var text, parser, xmlDoc;
+   // var text, parser, xmlDoc;
 
-        text = "<bookstore><book>" +
-    "<title>Everyday Italian</title>" +
-    "<author>Giada De Laurentiis</author>" +
-    "<year>2005</year>" +
-    "</book></bookstore>";
+    //    text = "<bookstore><book>" +
+    // "<title>Everyday Italian</title>" +
+    // "<author>Giada De Laurentiis</author>" +
+    // "<year>2005</year>" +
+    // "</book></bookstore>";
+    
+    
+    // parser = new DOMParser();
+    // xmlDoc = parser.parseFromString(text,"text/xml");
 
-    parser = new DOMParser();
-    xmlDoc = parser.parseFromString(text,"text/xml");
-
-    document.getElementById("demo").innerHTML =
-    xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+    // document.getElementById("demo").innerHTML =
+    // xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
 
     </script>
 </body>
