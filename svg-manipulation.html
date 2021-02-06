@@ -10,40 +10,60 @@
     <title>Document</title>
 </head>
 <body>
-    <img class="svg-img" src="macos.svg"><img>
-    <p id="demo"></p>
+    <img class="svg-style" src="macos.svg"><img>
+    <img class="svg-style2" src="macos.svg"><img>
+    <img class="svg-style3" src="macos.svg"><img>
+    <img class="svg-style4" src="macos.svg"><img>
+    <img class="svg-chadnge" src="macos.svg"><img>
+    <img class="svg-style" src="macos.svg"><img>
+    <img class="bob" src="macos.svg"><img>
+    <img class="demo"></img>
     <script>
+
+    function svgStyler(imageClass="svg-style",svgFile,style="fill:#456743"){
 
     var path = document.location.pathname
     var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'))
-    directory = directory + "macos.svg"
-    console.log(directory)
+    svgFilePath = directory + svgFile
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
         // Typical action to be performed when the document is ready:
 
-            document.getElementById("demo").innerHTML = xhttp.responseText;
             var parser, xmlDoc;
             parser = new DOMParser();
             xmlDoc = parser.parseFromString(xhttp.responseText,"text/xml");
-            path = xmlDoc.getElementsByTagName("path")
 
+            path = xmlDoc.getElementsByTagName("path")
         for (const styleTag of path){
             console.log(styleTag.getAttribute("style"));               
-            styleTag.setAttribute("style","fill:green");
+            styleTag.setAttribute("style",style);
             console.log(styleTag.getAttribute("style"));               
         }
-        var xmlString = (new XMLSerializer()).serializeToString(xmlDoc); // XML to String   
 
-        document.getElementById("demo").innerHTML = xmlString;
-        console.log(xmlString);  
+        var xmlString = (new XMLSerializer()).serializeToString(xmlDoc); // XML to String   
+        //document.getElementById("svg-style").outerHTML = xmlString;
+
+        for(let svg of document.getElementsByTagName("img")){
+            if (svg.classList.contains(imageClass)){
+                console.log(svg)
+                svg.outerHTML = xmlString
+                console.log(svg.outerHTML)
+                }
+            }   
         }
     };
-    var macos = "macos.svg"
-    xhttp.open("GET", macos, true);
+    console.log(directory)
+    xhttp.open("GET", svgFilePath, true);
     xhttp.send();
+
+    }
+    svgStyler("svg-style","macos.svg","fill:purple; width:2px;")
+    svgStyler("svg-style2","macos.svg","fill:purple; width:2px;")
+    svgStyler("svg-style3","macos.svg","fill:yellow; width:2px;")
+    svgStyler("svg-style4","macos.svg","fill:red; width:2px;")
+    svgStyler("bob","macos.svg","fill:green; width:2px;")
 
     </script>
 </body>
