@@ -2,13 +2,10 @@
 
 Description: Change the style attribute(e.g., fill:color) on svg that are nested in HTML 'img' tags. 
 
-<<<<<<< HEAD
+Example:
+
 ![Screenshot](rainbowBefore.png)
 
-=======
->>>>>>> de176d6ac64bf626e5bd4136f8c3eba7c4ef70e2
-Example:
-![Screenshot](rainbow.png)
 ```html
 <style>
   .rainbow{
