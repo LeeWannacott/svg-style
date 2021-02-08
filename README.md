@@ -2,15 +2,17 @@
 
 Description: Change the style attribute(e.g., fill:color) on svg that are nested in HTML 'img' tags. 
 
-Instructions: Run <script src="svg-style.js"></script>.
+Instructions: 
 
-Call svgStyle(imageClass,svgFile, style) after script loaded and img tags defined.
+1. Run <script src="svg-style.js"></script>.
 
-`imageClass:` The class you have put on the img tags.
+2. Invoke svgStyle(imageClass,svgFile, style) after script loaded and img tags defined. 
 
-`svgFile:` the svg file that src="" is loading on the img tag.
+* `imageClass:` The class you have put on the img tags.
 
-`style:` What you want the style="" to contain e.g. "fill:yellow; filter:invert(80%)"
+* `svgFile:` the svg file that src="" is loading on the img tag.
+
+* `style:` What you want the style="" to contain e.g. "fill:yellow; filter:invert(80%)"
 
 Example:
 
@@ -35,9 +37,9 @@ Example:
 
     </div>
 
-// Loading svg-style
+// Loading svg-style.js
 <script src="svg-style.js"></script>
-// Using svg-style to change the fill property of svg
+// Call function svgStyle to change the style/fill attribute of an SVG file.
 <script>
     svgStyle("red","macos.svg","fill:red;")
     svgStyle("orange","macos.svg","fill:#FF7F00;")
