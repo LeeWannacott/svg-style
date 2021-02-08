@@ -4,9 +4,9 @@ Description: Change the style attribute(e.g., fill:color) on svg that are nested
 
 Instructions: 
 
-1. Add <script src="svg-style.js"></script>.
+1. Add `<script src="svg-style.js"></script>.`
 
-2. Invoke svgStyle(imageClass,svgFile, style)
+2. Invoke `svgStyle(imageClass,svgFile, style)`
 
 * `imageClass:` The class you have put on the img tags.
 
