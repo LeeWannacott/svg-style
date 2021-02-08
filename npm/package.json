@@ -1,0 +1,30 @@
+{
+  "name": "svg-style-js",
+  "version": "0.1.0",
+  "description": "Change style attribute of SVG that are sourced inside <img> tags.",
+  "main": "svg-style.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeWannacott/svg-style-js.git"
+  },
+  "keywords": [
+    "svg",
+    "js",
+    "fill-color",
+    "style",
+    "svg-image",
+    "path",
+    "img",
+    "javaScript",
+    "change"
+  ],
+  "author": "LeeWannacott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeeWannacott/svg-style-js/issues"
+  },
+  "homepage": "https://github.com/LeeWannacott/svg-style-js#readme"
+}
