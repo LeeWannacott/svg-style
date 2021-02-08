@@ -1,6 +1,6 @@
 {
   "name": "svg-style-js",
-  "version": "0.1.0",
+  "version": "0.1.0-a",
   "description": "Change style attribute of SVG that are sourced inside <img> tags.",
   "main": "svg-style.js",
   "scripts": {
