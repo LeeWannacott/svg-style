@@ -1,6 +1,6 @@
 # svg-style-js
 
-Description: Change the style attribute(e.g., fill:color) on svg that are nested in HTML 'img' tags. 
+Description: Change the style attribute(e.g., fill:color) on SVG files that are sourced inside HTML 'img' tags. 
 
 # Instructions: 
 
