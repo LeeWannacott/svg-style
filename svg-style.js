@@ -1,4 +1,20 @@
 
+/* 
+svg-style-js
+Author: Lee Wannacott
+Licence: MIT License Copyright (c) 2021 Lee Wannacott 
+GitHub Repository: https://github.com/LeeWannacott/svg-style-js
+
+Instructions: Run this script <script src="svg-style.js"></script>.
+
+Call svgStyle(imageClass,svgFile, style) after script loaded and img tags defined.
+
+imageClass: The class you have put on the img tags.
+svgFile: the svg file that src="" is loading on the img tag.
+style: What you want the style="" to contain e.g. "fill:yellow; filter:invert(80%)"
+
+*/
+
 function svgStyle(imageClass="svg-style",svgFile,style="fill:black"){
 
     var path = document.location.pathname
@@ -16,8 +32,7 @@ function svgStyle(imageClass="svg-style",svgFile,style="fill:black"){
                 styleTag.setAttribute("style",style);
             }
 
-            var xmlString = (new XMLSerializer()).serializeToString(xhttp.responseXML); // XML to String   
-            //document.getElementById("svg-style").outerHTML = xmlString;
+            var xmlString = (new XMLSerializer()).serializeToString(xhttp.responseXML); 
 
             for(let svg of document.getElementsByTagName("img")){
                 if (svg.classList.contains(imageClass)){
