@@ -10,7 +10,7 @@ Instructions:
 
 * `imageClass:` The class you have put on the img tags.
 
-* `svgFile:` the svg file that src="" is loading on the img tag.
+* `svgFile:` The svg file that src="" is loading on the img tag.
 
 * `style:` What you want the style="" to contain e.g. "fill:yellow; filter:invert(80%)"
 
