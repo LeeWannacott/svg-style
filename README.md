@@ -16,6 +16,7 @@ Instructions:
 
 Example:
 
+Before:
 ![Screenshot](rainbowBefore.png)
 
 ```html
@@ -51,4 +52,5 @@ Example:
 </script>
 </body>
 ```
+After:
 ![Screenshot](rainbowAfter.png)
