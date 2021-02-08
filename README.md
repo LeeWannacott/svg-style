@@ -2,7 +2,7 @@
 
 Description: Change the style attribute(e.g., fill:color) on svg that are nested in HTML 'img' tags. 
 
-Instructions: 
+# Instructions: 
 
 1. Add `<script src="svg-style.js"></script>.`
 
@@ -14,7 +14,7 @@ Instructions:
 
 * `style:` What you want the style="" to contain e.g. "fill:yellow; filter:invert(80%)"
 
-Example:
+# Example:
 
 Before:
 ![Screenshot](rainbowBefore.png)
