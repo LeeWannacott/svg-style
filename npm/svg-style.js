@@ -1,11 +1,11 @@
 
 /* 
-svg-style-js
+svg-style
 Author: Lee Wannacott
 Licence: MIT License Copyright (c) 2021 Lee Wannacott 
-GitHub Repository: https://github.com/LeeWannacott/svg-style-js
+GitHub Repository: https://github.com/LeeWannacott/svg-style
 
-Instructions: Run this script <script src="svg-style.js"></script>.
+Instructions: Add this script <script src="svg-style.js"></script>.
 
 Call svgStyle(imageClass,svgFile, style) after script loaded and img tags defined.
 
