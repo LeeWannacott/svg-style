@@ -2,6 +2,8 @@
 
 Description: Change the style attribute(e.g., fill:color) on SVG files that are sourced inside HTML 'img' tags. 
 
+npm: https://www.npmjs.com/package/svg-style
+
 # Instructions: 
 
 1. Add `<script src="svg-style.js"></script>.`
